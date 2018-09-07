@@ -1,0 +1,35 @@
+
+$headerColor: rgba(255, 255, 255, 0.534);
+.header{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   div{
+       margin-right: 50px;
+   }
+   margin-bottom: 10px;
+   background-color: $headerColor;
+    padding: 5px;
+    box-shadow: 0px 0px 5px 5px $headerColor;
+}
+
+.title{
+    padding: 5px;
+    background-color: #faeb17;
+    border: 3px solid red;
+    border-radius: 15%;
+}
+
+.menu, .basket{
+    cursor: pointer;
+    &:hover{
+    background-color: #faeb17
+    }
+ 
+        &:focus{
+            background-color: #fa17c9
+            }
+    outline: 0;
+}
+

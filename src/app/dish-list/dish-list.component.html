@@ -1,0 +1,19 @@
+<div class="menuBox">
+
+<div>
+  <app-basket></app-basket>
+</div>
+
+
+<div class="dish-container">
+  <div class="buttonsContainer">
+    <button (click)="ngOnInit()">Pizze</button>
+    <button (click)="showPastas()">Makarony</button>
+    <button (click)="showBeverages()">Napoje</button>
+  </div>
+
+  <app-dish-list-item *ngFor="let dish of dishes" [dish]="dish"></app-dish-list-item>
+
+</div>
+
+</div>

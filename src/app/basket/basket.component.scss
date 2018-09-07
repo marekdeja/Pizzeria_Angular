@@ -1,0 +1,10 @@
+$basketColor:rgba(255, 255, 255, 0.815);
+
+.basket-container{
+    background-color: $basketColor;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    margin-left: 100px;
+    margin-top:50px;
+}
