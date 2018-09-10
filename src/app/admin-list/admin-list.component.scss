@@ -1,13 +1,14 @@
 .dish-container{
     
-    text-align: center;
-    width:40%;
-    margin-left: 100px;
+    text-align: left;
+    width:100%;
+    margin-left: auto;
     margin-right:auto;
 }
 
 .buttonsContainer{
     margin-bottom: 5px;
+    text-align:center;
     button{
         padding: 5px;
         background-color: rgba(253, 190, 190, 0.61);
@@ -27,3 +28,13 @@
 .menuBox{
     display:flex;
 }
+
+.tableCenter{
+    text-align: center;
+}
+
+table{
+    border-collapse: collapse;
+    
+}
+

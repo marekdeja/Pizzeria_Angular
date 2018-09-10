@@ -1,7 +1,16 @@
 <div class="basket-container">
-  Twoj Koszyk
+  <div class='basketTitle'>Twój Koszyk</div>
 
-  <!-- ORDER LIST -->
+  
 
+  <div *ngFor="let dish of dishesToDisplay" class="orderPositionDelete">
+      <div class="orderPosition">
+  <div>{{dish.name}}</div> <div>{{dish.price}} zł </div>
+</div>
+<div class="counter">{{service.countDish(dish)}}</div>
+  <div class="deleteButton" (click)="deleteDish(dish)"><div class="minus"></div></div>
+  
+</div>
+<h2>Do zapłaty: {{service.countTotal()}} zł</h2>
   <button [routerLink]="['/order']">Zamówienie</button>
 </div>

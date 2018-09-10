@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input  } from '@angular/core';
+import { Dish } from '../models/dish.model';
+import { BasketService } from '../services/basket.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-basket',
@@ -6,10 +9,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./basket.component.scss']
 })
 export class BasketComponent implements OnInit {
+  dishes: Dish[];
+  dishesToDisplay: Dish[];
+  totalPrice: number;
+ 
 
-  constructor() { }
+  constructor(
+    readonly service: BasketService
+  ) {
 
-  ngOnInit() {
   }
 
+  ngOnInit(): void {
+    this.dishesToDisplay = this.service.getOrderListToDisplay();
+  }
+  
+  // ngDoCheck(): void {
+  //   this.totalPrice = this.service.countTotal();
+  // }
+
+  deleteDish(dish): void{
+    this.service.deleteDish(dish);
+  }
 }
+
+
+
+

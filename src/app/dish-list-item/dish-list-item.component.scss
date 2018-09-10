@@ -7,8 +7,8 @@ $dishColor:rgba(255, 255, 255, 0.815);
 
 .dish{
     padding:10px;
-    border: 1px solid;
-    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    border-radius: 30px;
     margin-bottom: 5px;
     background-color: $dishColor;
     &:hover{

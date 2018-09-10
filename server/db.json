@@ -6,7 +6,7 @@
       "isAvailable": true,
       "description": "Sos, ser",
       "type": "pizza",
-      "price": "22"
+      "price": "22.00"
     },
     {
       "id": 2,
@@ -23,64 +23,67 @@
       "description": "Sos, ser, pieczarki, szynka",
       "type": "pizza",
       "price": "24.50"
-    }
-  ],
-  "pastas": [
+    },
     {
-      "id": 1,
+      "id": 4,
       "name": "Spaghetti Bolognese",
       "isAvailable": false,
       "description": "Sos boloński",
-      "type": "spaghetti",
-      "price": "14"
+      "type": "pasta",
+      "price": "14.00"
     },
     {
-      "id": 2,
+      "id": 5,
       "name": "Spaghetti Siciliana",
       "isAvailable": true,
       "description": "Sos boloński z szynką i kukurydzą",
-      "type": "spaghetti",
+      "type": "pasta",
       "price": "17.50"
     },
     {
-      "id": 3,
+      "id": 6,
       "name": "Spaghetti Ravioli",
       "isAvailable": true,
       "description": "Sos pomidorowy",
-      "type": "spaghetti",
+      "type": "pasta",
       "price": "15.50"
-    }
-  ],
-  "beverages": [
+    },
     {
-      "id": 1,
+      "id": 7,
       "name": "Coca-Cola",
       "isAvailable": true,
       "description": "Szklana butelka 0,3",
-      "type": "gazowane",
-      "price": "5"
+      "type": "beverage",
+      "price": "5.00"
     },
     {
-      "id": 2,
+      "id": 8,
       "name": "Sprite",
       "isAvailable": true,
       "description": "Szklana butelka 0,3",
-      "type": "gazowane",
-      "price": "5"
+      "type": "beverage",
+      "price": "5.00"
     },
     {
-      "id": 3,
+      "id": 9,
       "name": "Woda gazowana",
       "isAvailable": false,
       "description": "Woda gazowana",
-      "type": "woda",
-      "price": "4"
+      "type": "beverage",
+      "price": "4.00"
     }
   ],
   "orders": [
     {
       "id": 1,
-      "dishIds": [1, 5]
+      "dishIds": [
+        1,
+        5
+      ],
+      "name": "Arkadiusz Nowak",
+      "phone": 607998543,
+      "address": "ul.Kolorowa 6, Poznan",
+      "status": "inDelivery"
     }
   ],
   "users": [

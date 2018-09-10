@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Dish } from '../models/dish.model';
+import { BasketService} from '../services/basket.service';
 
 @Component({
   selector: 'app-dish-list-item',
@@ -10,5 +11,13 @@ export class DishListItemComponent  {
 
   @Input() dish: Dish;
 
-  constructor() { }
+  constructor(
+    readonly service: BasketService
+    ) { }
+
+  addDish(dish): void{
+    this.service.addDish(dish);
+  }
+
+  
 }

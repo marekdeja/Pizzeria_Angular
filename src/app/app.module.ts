@@ -10,6 +10,8 @@ import { DishListItemComponent } from './dish-list-item/dish-list-item.component
 import { HttpClientModule } from '@angular/common/http';
 import { OrderComponent } from './order/order.component';
 import { BasketComponent } from './basket/basket.component';
+import { AdminListComponent } from './admin-list/admin-list.component';
+import { AdminDishListItemComponent } from './admin-dish-list-item/admin-dish-list-item.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { BasketComponent } from './basket/basket.component';
     DishListComponent,
     DishListItemComponent,
     OrderComponent,
-    BasketComponent
+    BasketComponent,
+    AdminListComponent,
+    AdminDishListItemComponent
   ],
   imports: [
     BrowserModule,

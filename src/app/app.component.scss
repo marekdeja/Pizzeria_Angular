@@ -5,31 +5,34 @@ $headerColor: rgba(255, 255, 255, 0.534);
    display: flex;
    justify-content: center;
    align-items: center;
+   user-select: none;
    div{
        margin-right: 50px;
    }
-   margin-bottom: 10px;
+   margin-bottom: 20px;
    background-color: $headerColor;
     padding: 5px;
     box-shadow: 0px 0px 5px 5px $headerColor;
 }
 
+
 .title{
     padding: 5px;
-    background-color: #faeb17;
-    border: 3px solid red;
+    background-color: #faeb178f;
+    border: 4px double red;
     border-radius: 15%;
+    font-family: 'Indie Flower', cursive;
+    
 }
 
-.menu, .basket{
+.menuElement{
     cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
     &:hover{
-    background-color: #faeb17
+    background-color: #faeb1775
     }
  
-        &:focus{
-            background-color: #fa17c9
-            }
     outline: 0;
 }
 
