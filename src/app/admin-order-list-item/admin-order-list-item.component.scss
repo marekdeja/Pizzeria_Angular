@@ -1,0 +1,36 @@
+.table{
+    display: flex;
+    
+    div{
+        border:1px solid;
+        border-bottom:0px;
+        border-right: 0;
+        flex-grow:1;
+        height:auto;
+        overflow-wrap: break-word;
+
+    }
+    &:hover{
+        background-color: rgba(66, 14, 14, 0.473);
+        cursor:pointer;
+    }
+}
+ 
+.tableId{
+    width: 50px;
+}
+.tableDishIds{
+    width: 50px;
+}
+.tableName{
+    width: 150px;
+}
+.tablePhone{
+   width: 150px;
+}
+.tableAddress{
+    width: 300px;
+}
+.tableStatus{
+    width: 100px;
+}

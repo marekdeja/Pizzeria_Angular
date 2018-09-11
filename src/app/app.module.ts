@@ -12,6 +12,8 @@ import { OrderComponent } from './order/order.component';
 import { BasketComponent } from './basket/basket.component';
 import { AdminListComponent } from './admin-list/admin-list.component';
 import { AdminDishListItemComponent } from './admin-dish-list-item/admin-dish-list-item.component';
+import { AdminOrderListItemComponent } from './admin-order-list-item/admin-order-list-item.component';
+import { DishDetailsComponent } from './dish-details/dish-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { AdminDishListItemComponent } from './admin-dish-list-item/admin-dish-li
     OrderComponent,
     BasketComponent,
     AdminListComponent,
-    AdminDishListItemComponent
+    AdminDishListItemComponent,
+    AdminOrderListItemComponent,
+    DishDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,9 @@
+$bgColor:rgba(255, 255, 255, 0.815);
+
 .dish-container{
     
     text-align: left;
-    width:100%;
+    width:auto;
     margin-left: auto;
     margin-right:auto;
 }
@@ -22,7 +24,6 @@
             background-color: rgba(250, 231, 231, 0.705);
         }
     }
-
 }
 
 .menuBox{
@@ -31,10 +32,11 @@
 
 .tableCenter{
     text-align: center;
-}
-
-table{
-    border-collapse: collapse;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    background-color: $bgColor;
     
 }
+
+
 

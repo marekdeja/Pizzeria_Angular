@@ -84,6 +84,63 @@
       "phone": 607998543,
       "address": "ul.Kolorowa 6, Poznan",
       "status": "inDelivery"
+    },
+    {
+      "dishIds": [],
+      "name": "Arek",
+      "phone": 345353226,
+      "address": "Poznan",
+      "status": "inDelivery",
+      "id": 2
+    },
+    {
+      "dishIds": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3
+      ],
+      "name": "Arek",
+      "phone": 345353226,
+      "address": "Poznan",
+      "status": "inDelivery",
+      "id": 3
+    },
+    {
+      "dishIds": [
+        2,
+        3,
+        3,
+        7,
+        5
+      ],
+      "name": "Arek",
+      "phone": 345353226,
+      "address": "Poznan",
+      "status": "inDelivery",
+      "id": 4
+    },
+    {
+      "dishIds": [
+        1
+      ],
+      "name": "Arek",
+      "phone": 345353226,
+      "address": "Poznan",
+      "status": "inDelivery",
+      "id": 5
+    },
+    {
+      "dishIds": [],
+      "name": "Arek",
+      "phone": 345353226,
+      "address": "Poznan",
+      "status": "inDelivery",
+      "id": 6
     }
   ],
   "users": [
