@@ -23,10 +23,6 @@ export class OrderComponent implements OnInit {
     this.service.sendOrder();
   }
 
-  // showOrders(): void {
-  //   this.sub = this.service.getOrders()
-  //   .subscribe(res=>this.orders = res);
-  // }
 
 }
 

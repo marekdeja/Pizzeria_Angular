@@ -1,0 +1,69 @@
+<div class="detailsContainer" *ngIf="order">
+
+  <div class="row">
+    <div class="column">Id: </div>
+    <div class="column">{{order.id}}</div>
+  </div>
+
+  <div class="row ">
+    <div class="column">Nazwa: </div>
+    <div class="column">{{order.name}}</div>
+  </div>
+
+  <div class="row ">
+    <div class="column2">Zamowienie: </div>
+
+    <div class="column2" >
+            <ul *ngFor="let dish of dishesCustomerUnique" class="" >
+                 <li>{{dish?.name}}</li>
+      </ul>
+    </div>
+    <div class="column2" >
+        <ul *ngFor="let dish of dishesCustomerUnique" class="" >
+             <li>{{dish?.price}} zł</li>
+  </ul>
+</div>
+    <div class="column2" >
+        
+  <ul *ngFor="let amount of amountsDishesCustomer" class="" >
+      <li>ilość: <b>{{amount}}</b> </li>
+  </ul>
+
+</div>
+    </div>
+
+    <div class="row ">
+        <div class="column">Do zapłaty: </div>
+        <div class="column">{{getTotalPrice()}} zł</div>
+      </div>
+
+    <div class="row ">
+      <div class="column">Telefon: </div>
+      <div class="column">{{order.phone}}</div>
+    </div>
+
+    <div class="row ">
+      <div class="column">Adres: </div>
+      <div class="column">{{order.address}}</div>
+    </div>
+
+    <div class="row ">
+      <div class="column">Status: </div>
+      <div class="column">{{order.status}}
+         <select name="statusList" (change)="changeStatus($e)">
+          <option value="ordered">Zamowiony</option>
+          <option value="readyToDeliver">Gotowy do dowozu</option>
+          <option value="inDelivery">W dowozie</option>
+          <option value="delivered">Dostarczono</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      
+      <div class="backButton" (click)="goBack()">wróć</div>
+
+    </div>
+
+
+  </div>

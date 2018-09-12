@@ -3,7 +3,7 @@ $bgColor:rgba(255, 255, 255, 0.815);
 .detailsContainer{
     text-align: center;
     margin: auto;
-    width: 400px;
+    width: 500px;
     background-color: $bgColor;
     
     border: 1px solid;
@@ -13,6 +13,19 @@ $bgColor:rgba(255, 255, 255, 0.815);
     float: left;
     width: 50%;
     text-align: left;
+}
+
+.column2 {
+    float: left;
+    text-align: left;
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 3px;
+    }
+    li{
+        padding-left: 10px;
+    }
 }
 
 /* Clear floats after the columns */

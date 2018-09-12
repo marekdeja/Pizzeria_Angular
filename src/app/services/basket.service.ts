@@ -62,13 +62,13 @@ export class BasketService {
 
   }
 
-  countTotal(): number {
+  countTotal(): string {
     this.totalPrice = 0;
     for (let i = 0; i < this.dishes.length; i++) {
       let myNumber: number = +this.dishes[i].price;
       this.totalPrice += myNumber;
     }
-    return this.totalPrice;
+    return this.totalPrice.toFixed(2);
   }
 
 

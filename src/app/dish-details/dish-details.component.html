@@ -1,11 +1,44 @@
-<div class="detailsContainer">
+<div class="detailsContainer" *ngIf="dish">
 
+  <div class="row" >
+    <div class="column">Id: </div>
+    <div class="column">{{dish.id}}</div>
+  </div>
 
-  <div>Nazwa</div>
-  <div>Dostepnosc</div>
-  <div>Opis</div>
-  <div>Rodzaj</div>
-  <div>Cena</div>
-  <div>Zdjecie</div>
+  <div class="row row2">
+    <div class="column">Nazwa: </div>
+    <div class="column">{{dish.name}}</div>
+  </div>
+
+  <div class="row row2">
+    <div class="column">Dostępność: </div>
+    <div class="column"><input type="checkbox" id="myCheck" (click)="this.changeExist(dish)" [checked]="dish.isAvailable">{{this.checkExist(dish.isAvailable)}}</div>
+  </div>
+
+  <div class="row">
+      <div class="column">Opis: </div>
+      <div class="column">{{dish.description}}</div>
+    </div>
+
+    <div class="row">
+        <div class="column">Typ: </div>
+        <div class="column">{{dish.type}}</div>
+      </div>
+
+      <div class="row">
+          <div class="column">Cena: </div>
+          <div class="column">{{dish.price}} zł</div>
+        </div>
+
+        <div class="row">
+            <div class="column">Zdjęcie: </div>
+            <div class="column">brak</div>
+          </div>
+          
+          <div class="row">
+              <div class="backButton" (click)="goBack()">wróć</div>
+
+            </div>
+         
 
 </div>

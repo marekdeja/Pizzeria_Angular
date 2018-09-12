@@ -1,3 +1,4 @@
+
 import { Component, OnInit, Input } from '@angular/core';
 import { Order } from '../models/order.model';
 
@@ -8,6 +9,7 @@ import { Order } from '../models/order.model';
 })
 export class AdminOrderListItemComponent implements OnInit {
   @Input() order: Order;
+
 
   constructor() { }
 

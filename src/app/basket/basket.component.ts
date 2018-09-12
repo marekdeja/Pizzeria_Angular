@@ -24,10 +24,6 @@ export class BasketComponent implements OnInit {
     this.dishesToDisplay = this.service.getOrderListToDisplay();
   }
   
-  // ngDoCheck(): void {
-  //   this.totalPrice = this.service.countTotal();
-  // }
-
   deleteDish(dish): void{
     this.service.deleteDish(dish);
   }
