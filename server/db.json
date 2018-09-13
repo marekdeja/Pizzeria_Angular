@@ -83,83 +83,41 @@
       "name": "Arkadiusz Nowak",
       "phone": 607998543,
       "address": "ul.Kolorowa 6, Poznan",
-      "status": "inDelivery"
+      "status": "ordered"
     },
     {
+      "name": "Ola",
+      "phone": "44444444444",
+      "address": "zoliborz",
       "dishIds": [
-        1,
         2,
         2,
-        6
+        2,
+        3,
+        4,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
       ],
-      "name": "Arek",
-      "phone": 345353226,
-      "address": "Poznan",
-      "status": "inDelivery",
+      "status": "readyToDeliver",
       "id": 2
     },
     {
+      "name": "Tomek",
+      "phone": "21314566653",
+      "address": "Warszawa",
       "dishIds": [
         1,
         2,
-        2,
-        6
-      ],
-      "name": "Arek",
-      "phone": 345353226,
-      "address": "Poznan",
-      "status": "inDelivery",
-      "id": 3
-    },
-    {
-      "dishIds": [
-        1,
-        1,
-        2
-      ],
-      "name": "Arek",
-      "phone": 345353226,
-      "address": "Poznan",
-      "status": "inDelivery",
-      "id": 4
-    },
-    {
-      "dishIds": [
-        1,
-        1,
+        3,
         7
       ],
-      "name": "Arek",
-      "phone": 345353226,
-      "address": "Poznan",
-      "status": "inDelivery",
-      "id": 5
-    },
-    {
-      "dishIds": [
-        1
-      ],
-      "name": "Arek",
-      "phone": 345353226,
-      "address": "Poznan",
-      "status": "inDelivery",
-      "id": 6
-    },
-    {
-      "dishIds": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        2
-      ],
-      "name": "Arek",
-      "phone": 345353226,
-      "address": "Poznan",
-      "status": "inDelivery",
-      "id": 7
+      "status": "ordered",
+      "id": 3
     }
   ],
   "users": [

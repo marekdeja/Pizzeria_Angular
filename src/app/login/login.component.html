@@ -1,0 +1,29 @@
+<div class="detailsContainer">
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h2>Logowanie</h2>
+    <label>
+      Login:
+      <input type="text" formControlName="login" required>
+    </label>
+    <p>
+      <label>
+        Haslo:
+        <input type="password" formControlName="password">
+      </label>
+     <p>
+      <button type="submit">Zaloguj</button>
+     </p>
+        
+  </form>
+
+  <div class="statusInfo">
+    <div *ngIf="loginForm.status==='VALID'" class="valid">
+      Dane poprawne
+    </div>
+    <div *ngIf="loginForm.status==='INVALID'" class="invalid">
+      Dane niepoprawne, pola nie mogą być puste
+    </div>
+  </div>
+
+    </div>

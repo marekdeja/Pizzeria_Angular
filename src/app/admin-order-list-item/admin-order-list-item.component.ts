@@ -16,4 +16,18 @@ export class AdminOrderListItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  translateStatus(order) {
+
+    switch (order.status) {
+      case "ordered":
+        return "Zamowiony";
+      case "readyToDeliver":
+        return "Gotowy do dowozu";
+      case "inDelivery":
+        return "W dowozie";
+      case "delivered":
+        return "Dostarczono";
+    }
+  }
+
 }

@@ -21,7 +21,7 @@ export class OrderService {
     this.dishes=this.basketService.getOrderList();
   }
 
-  sendOrder(){
+  sendOrder(newOrder: Order){
     this.getDishes();
 
     let dishIDs: number[] = [];
@@ -29,15 +29,11 @@ export class OrderService {
       dishIDs.push(this.dishes[i].id);
     }
 
-    let order1: Order = {
-      dishIds: dishIDs,
-      name: "Arek",
-      phone: 345353226,
-      address: "Poznan",
-      status: "inDelivery"
-    }
+    newOrder.dishIds= dishIDs;
+    newOrder.status = "ordered";
+
   
-    this.addOrder(order1).subscribe();
+    this.addOrder(newOrder).subscribe();
     
   }
 
@@ -52,6 +48,11 @@ export class OrderService {
 
   getOrder(id: number): Observable<Order> {
     return this.http.get<Order>(`/api/orders/${id}`);
+  }
+
+  updateOrder(order: Order): Observable<Order> {
+    return this.http.put<Order>(`/api/orders/${order.id}`, order);
+   
   }
 
 

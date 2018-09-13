@@ -27,6 +27,7 @@ export class BasketComponent implements OnInit {
   deleteDish(dish): void{
     this.service.deleteDish(dish);
   }
+
 }
 
 

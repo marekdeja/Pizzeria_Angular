@@ -49,8 +49,9 @@
 
     <div class="row ">
       <div class="column">Status: </div>
-      <div class="column">{{order.status}}
-         <select name="statusList" (change)="changeStatus($e)">
+      <div class="column">{{translateStatus(order)}}
+         <select name="statusList" (change)="changeStatus(order)" id="orderSelect">
+            <option >--Zmien--</option>
           <option value="ordered">Zamowiony</option>
           <option value="readyToDeliver">Gotowy do dowozu</option>
           <option value="inDelivery">W dowozie</option>

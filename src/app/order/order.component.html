@@ -1,17 +1,45 @@
 <div class="orderBox">
 
-<div >
-  <app-basket></app-basket>
-</div>
+  <div>
+    <app-basket></app-basket>
+  </div>
 
-<div class="order-container">
+  <div class="order-container">
+
+    
+
+    <!-- HERE LIST OF POSITION TO ORDER -->
+    <div id="orderInfo" class='nonVisible'>Twoje zamówienie przekazano do realizacji</div>
+    <form [formGroup]="personalData" (ngSubmit)="onSubmit()" id="myForm">
+      <h2>Twoje dane</h2>
+      <label>
+        Imię i nazwisko:
+        <input type="text" formControlName="name" required>
+      </label>
+      <p>
+        <label>
+          Nr telefonu:
+          <input type="text" formControlName="phone">
+        </label>
+        <p>
+          <label>
+            Adres:
+            <input type="text" formControlName="address">
+          </label>
+          <p>
+          <button type="submit">Zamów</button>
+
+          <div class="statusInfo">
+            <div *ngIf="personalData.status==='VALID'" class="valid">
+              Dane poprawne
+            </div>
+            <div *ngIf="personalData.status==='INVALID'" class="invalid">
+              Dane niepoprawne, pola nie mogą być puste, nr telefonu musi mieć min. 9 cyfr
+            </div>
+          </div>
+    </form>
+    
   
-  <h1>Twoje zamówienie</h1>
-
-  <!-- HERE LIST OF POSITION TO ORDER -->
-
-  <button (click)="sendOrder()">Zamów</button>
-
-</div>
+  </div>
 
 </div>

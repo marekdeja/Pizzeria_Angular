@@ -8,9 +8,18 @@
 
 .buttonsContainer{
     margin-bottom: 5px;
+    width:50%;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(245, 248, 72, 0.603);
     button{
         padding: 5px;
-        background-color: rgba(253, 190, 190, 0.61);
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.61);
         margin-left: 10px;
         margin-right: 10px;
         font-size: 20px;
@@ -21,6 +30,7 @@
             background-color: rgba(250, 231, 231, 0.705);
         }
     }
+    
 
 }
 

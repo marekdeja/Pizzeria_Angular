@@ -54,7 +54,6 @@ export class DishDetailsComponent implements OnInit, OnDestroy {
       dish.isAvailable = true;
     }
     
-    console.log(dish.id);
      this.sub2 = this.service.updateDish(dish).subscribe();
      
   }

@@ -20,7 +20,8 @@ export class OrderDetailsComponent implements OnInit {
   sub2: Subscription;
   dishes: Dish[] = [];
   dishesCustomer: Dish[] = [];
-   customerDishIds = [];
+  customerDishIds = [];
+
 
   dishesCustomerUnique = [];
   amountsDishesCustomer = [];
@@ -47,12 +48,12 @@ export class OrderDetailsComponent implements OnInit {
       this.getAmountsDishesCustomer();
     });
 
-        
+
   }
 
   ngOnDestroy(): void {
     this.sub.unsubscribe();
-    
+
 
   }
 
@@ -62,25 +63,25 @@ export class OrderDetailsComponent implements OnInit {
 
   getOrder(order: Order) {
     this.dishesCustomer = [];
-    
-  
-       this.customerDishIds = order.dishIds;
-      for (let i = 0; i < this.customerDishIds.length; i++) {
-        this.dishesCustomer.push( this.dishes[this.customerDishIds[i]-1]);
-      }
+
+
+    this.customerDishIds = order.dishIds;
+    for (let i = 0; i < this.customerDishIds.length; i++) {
+      this.dishesCustomer.push(this.dishes[this.customerDishIds[i] - 1]);
+    }
 
     return this.dishesCustomer;
   }
 
-  getDishesCustomerUnique(){
+  getDishesCustomerUnique() {
     this.dishesCustomerUnique = Array.from(new Set(this.dishesCustomer));
   }
 
-  getAmountsDishesCustomer(){
-    for (let i=0; i<this.dishesCustomerUnique.length; i++){
-      let amount=0;
-      for (let j=0; j<this.dishesCustomer.length; j++){
-        if(this.dishesCustomerUnique[i]===this.dishesCustomer[j]){
+  getAmountsDishesCustomer() {
+    for (let i = 0; i < this.dishesCustomerUnique.length; i++) {
+      let amount = 0;
+      for (let j = 0; j < this.dishesCustomer.length; j++) {
+        if (this.dishesCustomerUnique[i] === this.dishesCustomer[j]) {
           amount++;
         }
       }
@@ -89,23 +90,43 @@ export class OrderDetailsComponent implements OnInit {
 
   }
 
-  getTotalPrice(){
-    let totalPrice:number = 0;
+  getTotalPrice() {
+    let totalPrice: number = 0;
 
 
-    for (let i=0; i<this.dishesCustomer.length; i++){
-      if(this.dishesCustomer[i]) {
-        let elementPrice:number = +this.dishesCustomer[i].price;
-        totalPrice+=elementPrice;
+    for (let i = 0; i < this.dishesCustomer.length; i++) {
+      if (this.dishesCustomer[i]) {
+        let elementPrice: number = +this.dishesCustomer[i].price;
+        totalPrice += elementPrice;
       }
-    
+
     }
     return totalPrice.toFixed(2);
   }
 
-  changeStatus($e){
-    
-    console.log($e);
+  changeStatus(order, elem) {
+    var e = document.getElementById("orderSelect") as HTMLSelectElement;
+    var statusDOM = e.options[e.selectedIndex].value;
+    order.status = statusDOM;
+    console.log(statusDOM);
+    this.sub2 = this.service.updateOrder(order).subscribe();
+  }
+
+  translateStatus(order) {
+    var e = document.getElementById("orderSelect") as HTMLSelectElement;
+    e.selectedIndex = 0;
+
+    let orderStatus = order.status;
+    switch (orderStatus) {
+      case "ordered":
+        return "Zamowiony";
+      case "readyToDeliver":
+        return "Gotowy do dowozu";
+      case "inDelivery":
+        return "W dowozie";
+      case "delivered":
+        return "Dostarczono";
+    }
   }
 
 }

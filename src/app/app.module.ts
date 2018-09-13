@@ -15,6 +15,10 @@ import { AdminDishListItemComponent } from './admin-dish-list-item/admin-dish-li
 import { AdminOrderListItemComponent } from './admin-order-list-item/admin-order-list-item.component';
 import { DishDetailsComponent } from './dish-details/dish-details.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
+import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -27,13 +31,15 @@ import { OrderDetailsComponent } from './order-details/order-details.component';
     AdminDishListItemComponent,
     AdminOrderListItemComponent,
     DishDetailsComponent,
-    OrderDetailsComponent
+    OrderDetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
