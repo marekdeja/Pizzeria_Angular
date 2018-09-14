@@ -9,8 +9,8 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./basket.component.scss']
 })
 export class BasketComponent implements OnInit {
-  dishes: Dish[];
-  dishesToDisplay: Dish[];
+  dishes: Dish[] = [];
+  dishesToDisplay: Dish[] = [];
   totalPrice: number;
  
 

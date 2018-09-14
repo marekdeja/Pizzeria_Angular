@@ -6,15 +6,18 @@ import { Dish } from '../models/dish.model';
 })
 export class BasketService {
   dishes: Dish[] = [];
+  
   dishesToDisplay: Dish[] = [];
   totalPrice: number = 0;
 
   constructor(
-  ) { }
+  ) {   }
 
   getOrderList(): Dish[] {
     return this.dishes;
   }
+
+
 
   getOrderListToDisplay(): Dish[] {
     return this.dishesToDisplay;
@@ -37,7 +40,7 @@ export class BasketService {
     this.countTotal();
   }
 
-  countDish(dish): number {
+  countDish(dish: Dish): number {
     let amount: number = 0;
     for (let i = 0; i < this.dishes.length; i++) {
       if (this.dishes[i] === dish) {
