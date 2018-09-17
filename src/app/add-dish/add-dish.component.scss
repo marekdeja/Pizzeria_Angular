@@ -1,0 +1,108 @@
+$bgColor:rgba(255, 255, 255, 0.815);
+
+.order-container{
+    
+    text-align: center;
+    width:40%;
+    margin-left: auto;
+    margin-right:auto;
+    background-color: $bgColor;
+    border: 1px solid rgba(0, 0, 0, 0.486);
+    border-radius: 10px;
+
+}
+
+.orderBox{
+    display: flex;
+    
+}
+
+#orderInfo{
+    padding:4px;
+    border: 1px solid;
+    background-color: rgba(28, 226, 28, 0.692);
+    margin:auto;
+    margin-top:50px;
+    
+}
+.visible{
+    display: inline-block;
+}
+.nonVisible{
+    display:none;
+}
+
+.statusInfo{
+   
+    background-color: rgba(255, 255, 255, 0.699);
+    border-radius: 10px;
+    .invalid{
+        color: red;
+    }
+    .valid{
+        color: rgb(3, 131, 9);
+      
+    }
+}
+
+button{
+    padding:5px;
+    width: 140px;
+    background-color: lighten($bgColor, 20%);
+    border: 1px solid rgba(0, 0, 0, 0.377);
+    border-radius: 10px;
+    margin: auto;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgba(253, 255, 112, 0.39);
+    
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: rgba(255, 255, 255, 0.767);
+    &:focus{
+        background-color: rgba(248, 247, 166, 0.452);
+    }
+    font-size: 24px;
+    text-align: center;
+}
+
+input[type=checkbox] {
+    padding-left:5px;
+    padding-right:5px;
+    border-radius:0px;
+
+    -webkit-appearance:button;
+
+    border: solid 2px rgba(29, 29, 9, 0.664);
+
+    background-color:#f2f7d0b7;
+    white-space: nowrap;
+    overflow:hidden;
+
+    width:20px;
+    height:20px;
+
+    
+
+}
+
+input[type=checkbox]:hover {
+    box-shadow:0px 0px 10px #d9ff00;
+    background-color: azure;
+}
+
+input[type=checkbox]:checked {
+    background-color:rgb(45, 189, 8);
+}
+
+
+

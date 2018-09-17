@@ -35,7 +35,7 @@
     {
       "id": 5,
       "name": "Spaghetti Siciliana",
-      "isAvailable": false,
+      "isAvailable": true,
       "description": "Sos boloński z szynką i kukurydzą",
       "type": "pasta",
       "price": "17.50"
@@ -86,58 +86,39 @@
       "status": "ordered"
     },
     {
-      "name": "Ola",
-      "phone": "44444444444",
-      "address": "zoliborz",
-      "dishIds": [
-        2,
-        2,
-        2,
-        3,
-        4,
-        6,
-        7,
-        7,
-        7,
-        7,
-        7,
-        7
-      ],
-      "status": "readyToDeliver",
-      "id": 2
-    },
-    {
-      "name": "Tomek",
-      "phone": "21314566653",
-      "address": "Warszawa",
-      "dishIds": [
-        1,
-        2,
-        3,
-        7
-      ],
-      "status": "ordered",
-      "id": 3
-    },
-    {
-      "name": "fdfd",
-      "phone": "4444444444444",
-      "address": "f",
+      "name": "Robert ",
+      "phone": "6060606444",
+      "address": "gggg",
       "dishIds": [
         1,
         1,
-        1,
-        1,
         2,
         2,
-        2,
-        3,
         3,
         3,
         3
       ],
-      "status": "readyToDeliver",
-      "id": 4
+      "status": "ordered",
+      "id": 22
+    },
+    {
+      "name": "rfr",
+      "phone": "43443443433",
+      "address": "f",
+      "dishIds": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "status": "ordered",
+      "id": 23
     }
   ],
   "users": [

@@ -1,3 +1,6 @@
+import { LoginService } from './../services/login.service';
+import { BasketService } from './../services/basket.service';
+import { BasketComponent } from './../basket/basket.component';
 import { getTestBed } from '@angular/core/testing';
 import { Component, OnInit } from '@angular/core';
 import { OrderService} from '../services/order.service';
@@ -22,14 +25,15 @@ export class OrderComponent implements OnInit {
   order: Order;
 
   constructor(
-    readonly service: OrderService
+    readonly service: OrderService,
+    readonly basketService: BasketService
   ) { }
 
   ngOnInit() {
   }
 
   onSubmit(){
-    if (this.personalData.status==="VALID"){
+    if (this.personalData.status==="VALID" && this.basketService.dishes.length>0){
     let newOrder: Order = this.personalData.value;
     this.service.sendOrder(newOrder);
     let el = document.getElementById("orderInfo");
@@ -37,9 +41,18 @@ export class OrderComponent implements OnInit {
     el.setAttribute('class','visible');
     elForm.setAttribute('class','nonVisible');
     }
+    else if(this.basketService.dishes.length===0){
+      alert("Koszyk pusty!");
+    }
     else{
       alert("Niepoprawne dane, uzupelnij wszystkie. Nazwa i adres nie moga byc puste. Telefon musi miec min. 6 cyfr");
     }
+
+  
+    this.basketService.dishes= [];
+     this.basketService.dishesToDisplay = [];
+     
+     
   }
 
  

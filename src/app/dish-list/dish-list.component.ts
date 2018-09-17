@@ -1,7 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Dish } from '../models/dish.model';
-import { DishesService} from '../services/dishes.service';
+import { DishesService } from '../services/dishes.service';
 import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-dish-list',
@@ -9,8 +10,8 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./dish-list.component.scss']
 })
 export class DishListComponent implements OnInit, OnDestroy {
-dishes: Dish[];
- sub: Subscription;
+  dishes: Dish[];
+  sub: Subscription;
 
   constructor(
     readonly service: DishesService
@@ -18,24 +19,38 @@ dishes: Dish[];
 
   ngOnInit(): void {
     this.sub = this.service.getPizzas()
-    .subscribe(res=>this.dishes = res);
+      .subscribe(res => this.dishes = res);
   }
 
   ngOnDestroy(): void {
-    if(this.sub) {
+    if (this.sub) {
       this.sub.unsubscribe();
     }
   }
 
   showPastas(): void {
     this.sub = this.service.getPastas()
-    .subscribe(res=>this.dishes = res);
+      .subscribe(res => this.dishes = res);
+
   }
+
+
 
   showBeverages(): void {
     this.sub = this.service.getBeverages()
-    .subscribe(res=>this.dishes = res);
+      .subscribe(res => this.dishes = res);
   }
 
+  sortDishes(): void {
+    this.dishes.sort(function (a, b) {
+      return a.price - b.price;
+    });
+  }
+
+  sortDishesGreat(): void {
+    this.dishes.sort(function (a, b) {
+      return b.price - a.price;
+    });
+  }
 
 }

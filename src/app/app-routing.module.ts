@@ -1,3 +1,4 @@
+import { AddDishComponent } from './add-dish/add-dish.component';
 import { AuthGuard } from './guards/auth.guard';
 import { OrderDetailsComponent } from './order-details/order-details.component';
 import { NgModule } from '@angular/core';
@@ -13,8 +14,9 @@ const routes: Routes = [
   { path: 'dish-list', component: DishListComponent },
   { path: 'admin-list', component: AdminListComponent,  canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
-  { path: 'dish-details/:id', component: DishDetailsComponent },
-  { path: 'order-details/:id', component: OrderDetailsComponent },
+  { path: 'add-dish', component: AddDishComponent, canActivate: [AuthGuard]},
+  { path: 'dish-details/:id', component: DishDetailsComponent,  canActivate: [AuthGuard]  },
+  { path: 'order-details/:id', component: OrderDetailsComponent,   canActivate: [AuthGuard]  },
   { path: 'order', component: OrderComponent },
   { path: '**', redirectTo: 'dish-list' },
 

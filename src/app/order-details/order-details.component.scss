@@ -55,5 +55,19 @@ $bgColor:rgba(255, 255, 255, 0.815);
         background-color: #fa981775;
         
     }
+    margin-top: 10px;
+}
 
+.deleteButton{
+    background-color: #fd0800be;
+    width:30%;
+    margin: auto;
+    border: 1px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    &:hover{
+        background-color: #ff1e008e;
+        
+    }
 }

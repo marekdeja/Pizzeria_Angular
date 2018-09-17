@@ -23,6 +23,10 @@ export class BasketComponent implements OnInit {
   ngOnInit(): void {
     this.dishesToDisplay = this.service.getOrderListToDisplay();
   }
+
+  ngDoCheck(): void {
+    this.dishesToDisplay = this.service.getOrderListToDisplay();;
+  }
   
   deleteDish(dish): void{
     this.service.deleteDish(dish);

@@ -55,5 +55,9 @@ export class OrderService {
    
   }
 
+  deleteOrder(order: Order): Observable<Order> {
+    return this.http.delete<Order>(`/api/orders/${order.id}`);
+  }
+
 
 }

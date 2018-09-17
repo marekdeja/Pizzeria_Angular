@@ -47,4 +47,13 @@ export class DishesService {
    
   }
 
+  saveDish(dish: Dish):Observable<Dish> {
+    
+    return this.http.post<Dish>('/api/dishes', dish);
+   
+  }
+
+  deleteDish(dish: Dish): Observable<Dish> {
+    return this.http.delete<Dish>(`/api/dishes/${dish.id}`);
+  }
 }

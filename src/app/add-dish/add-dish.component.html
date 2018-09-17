@@ -1,0 +1,47 @@
+
+<div class="order-container">
+
+  <form [formGroup]="addDishForm" (ngSubmit)="onSubmit()">
+    <h2>Dodaj nowe danie</h2>
+    <label>
+      Nazwa:
+      <input type="text" formControlName="name" required>
+    </label>
+    <p>
+      <label>
+        <div class="avalBut">Dostępne:</div>
+            <input type="checkbox" formControlName="isAvailable">
+           
+        
+      </label>
+      <p>
+        <label>
+          Opis:
+          <input type="text" formControlName="description">
+        </label>
+        <p>
+          <label>
+            Typ:
+            <input type="text" formControlName="type">
+          </label>
+          <p>
+            <label>
+              Cena:
+              <input type="text" formControlName="price">
+            </label>
+     <p>
+      <button type="submit">Zapisz danie</button>
+     </p>
+
+     <div class="statusInfo">
+      <div *ngIf="addDishForm.status==='VALID'" class="valid">
+        Dane poprawne
+      </div>
+      <div *ngIf="addDishForm.status==='INVALID'" class="invalid">
+        Dane niepoprawne, nazwa i typ obowiązkowe, cena musi być liczbą
+      </div>
+    </div>
+        
+  </form>
+
+    </div>

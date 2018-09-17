@@ -2,19 +2,23 @@
 
 <div class="menuBox">
 
+        <div class="dish-container">
+                <div class="buttonsContainer">
+                  <button [routerLink]="['/add-dish']">Dodaj nowe danie</button>
+                 
+                </div>
+
   <div class="dish-container">
-    <div class="buttonsContainer">
-      <button (click)="ngOnInit()">Dania</button>
-      <button (click)="showPastas()">Zamówienia</button>
-    </div>
+    <div class="tableTitle">Dania</div>
     <div class="tableCenter">
- 
+      
         <app-admin-dish-list-item *ngFor="let dish of dishes" [dish]="dish"></app-admin-dish-list-item>
        
     </div>
 <br>
+<div class="tableTitle">Zamówienia</div>
     <div class="tableCenter">
-  
+      
         <app-admin-order-list-item *ngFor="let order of orders" [order]="order"></app-admin-order-list-item>
        
     </div>

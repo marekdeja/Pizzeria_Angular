@@ -10,10 +10,12 @@
     <button (click)="ngOnInit()">Pizze</button>
     <button (click)="showPastas()">Makarony</button>
     <button (click)="showBeverages()">Napoje</button>
+    
   </div>
-
+  <button (click)="sortDishes()" id="sortButton">Sortuj od najmniejszej ceny</button>
+  <button (click)="sortDishesGreat()" id="sortButton">Sortuj od największej ceny</button>
   <app-dish-list-item *ngFor="let dish of dishes" [dish]="dish"></app-dish-list-item>
 
 </div>
 
-</div>>
+</div>

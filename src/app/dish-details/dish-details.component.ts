@@ -58,6 +58,10 @@ export class DishDetailsComponent implements OnInit, OnDestroy {
      
   }
 
+  deleteDish(dish){
+    this.service.deleteDish(dish).subscribe();
+    this.goBack();
+  }
 
 
 }

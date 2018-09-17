@@ -129,4 +129,9 @@ export class OrderDetailsComponent implements OnInit {
     }
   }
 
+  deleteOrder(order){
+    this.service.deleteOrder(order).subscribe();
+    this.goBack();
+  }
+
 }

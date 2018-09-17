@@ -17,6 +17,7 @@ import { DishDetailsComponent } from './dish-details/dish-details.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddDishComponent } from './add-dish/add-dish.component';
 
 
 
@@ -32,7 +33,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AdminOrderListItemComponent,
     DishDetailsComponent,
     OrderDetailsComponent,
-    LoginComponent
+    LoginComponent,
+    AddDishComponent
   ],
   imports: [
     BrowserModule,
