@@ -17,8 +17,6 @@ export class BasketService {
     return this.dishes;
   }
 
-
-
   getOrderListToDisplay(): Dish[] {
     return this.dishesToDisplay;
   }
